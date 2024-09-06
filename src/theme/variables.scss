@@ -1,2 +1,19 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+:root {
+	--ion-color-brown-500: #A18F63;
+	--ion-color-brown-500-rgb: 161,143,99;
+	--ion-color-brown-500-contrast: #000000;
+	--ion-color-brown-500-contrast-rgb: 0,0,0;
+	--ion-color-brown-500-shade: #8e7e57;
+	--ion-color-brown-500-tint: #aa9a73;
+}
+
+.ion-color-brown-500 {
+	--ion-color-base: var(--ion-color-brown-500);
+	--ion-color-base-rgb: var(--ion-color-brown-500-rgb);
+	--ion-color-contrast: var(--ion-color-brown-500-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-brown-500-contrast-rgb);
+	--ion-color-shade: var(--ion-color-brown-500-shade);
+	--ion-color-tint: var(--ion-color-brown-500-tint);
+}

@@ -1,20 +1,37 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title><h1 style="font-size: 13px;">Queue Reservation Application for Krua Pa Lai</h1></ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-text-center" [fullscreen]="true">
+    <ion-grid>
+      <ion-col>
+        <ion-card-header style="text-align: center;">
+          <h1 style="font-size: 32px;">เข้าสู่ระบบ</h1>
+        </ion-card-header>
+      </ion-col>
+    </ion-grid>
+<ion-card class="ion-card">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-item color="dark" class="ion-item">
+      <ion-label position="floating">ชื่อผู้ใช้/เบอร์โทร</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item color="dark" class="ion-item2">
+      <ion-input type="password" label="รหัสผ่าน" value="Hello">
+        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+      </ion-input>
+    </ion-item>
+
+
+    <ion-button size="large" shape="round" color="secondary" (click)="gotomain()" class="ion-buttonlogin" color="brown-500">เข้าสู่ระบบ</ion-button><br>
+    <ion-button shape="round" fill="clear" color="secondary" (click)="gotoregister()"  color="dark">สมัครสมาชิก</ion-button>
+  </ion-card>
 </ion-content>
+
+

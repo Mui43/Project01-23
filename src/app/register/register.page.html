@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title><h1 style="font-size: 13px;">Queue Reservation Application for Krua Pa Lai</h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <ion-grid>
+      <ion-col>
+        <ion-card-header style="text-align: center;">
+          <h1 style="font-size: 32px;">สมัครสมาชิก</h1>
+        </ion-card-header>
+      </ion-col>
+    </ion-grid>
+
+    <ion-card>
+    <ion-item>
+      <ion-label position="floating">ชื่อผู้ใช้</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">อีเมล</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">รหัสผ่าน</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">ยืนยันรหัสผ่าน</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">เบอร์โทรศัพท์</ion-label>
+      <ion-input type="tel"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="secondary" >สมัครสมาชิก</ion-button>
+  </ion-card>
+  </ion-content>
+</ion-content>
