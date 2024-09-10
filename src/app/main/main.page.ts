@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-main',
   templateUrl: './main.page.html',
@@ -7,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPage implements OnInit {
 
-  constructor() { }
+  constructor(private Nav:NavController) {
+
+  }
+  gotoqeue(){
+    this.Nav.navigateForward('/qeue');
+}
+  gotohistoey(){
+  this.Nav.navigateForward('/histoey');
+}
+  gotohiprofile(){
+  this.Nav.navigateForward('/profile');
+}
 
   ngOnInit() {
   }

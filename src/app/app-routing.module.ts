@@ -19,6 +19,22 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
+  {
+    path: 'qeue',
+    loadChildren: () => import('./qeue/qeue.module').then( m => m.QeuePageModule)
+  },
+  {
+    path: 'histoey',
+    loadChildren: () => import('./histoey/histoey.module').then( m => m.HistoeyPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'done',
+    loadChildren: () => import('./done/done.module').then( m => m.DonePageModule)
+  },
 ];
 
 @NgModule({
