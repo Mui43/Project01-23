@@ -7,25 +7,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
-  <ion-card-header style="text-align: center;">
-    <h3>แอปพลิเคชันจองคิวอาหารร้านครัวป้าลัย</h3>
-    <h6>Queue Reservation Application for Krua Pa Lai</h6>
-  </ion-card-header>
-
-  <div>
-    <ion-card class="ion-card">
-    <ion-button expand="block" color="green-500" shape="round" class="ion-button" size="large" (click)="gotoqeue()">
+<ion-content color="brown2-1000">
+  <ion-card class="ion-card">
+    <ion-title class="title1">แอปพลิเคชันจองคิวอาหารร้านครัวป้าลัย</ion-title>
+    <ion-title class="title2">Queue Reservation Application for Krua Pa La</ion-title>
+    <ion-button expand="block" color="g2-1000"  class="ion-button" size="large" (click)="gotoqeue()">
       <h3>จองคิวอาหาร</h3>
     </ion-button>
-
-    <ion-button expand="block" color="brown-500" shape="round" class="ion-button" size="large" (click)="gotohistoey()">
-      <h3 class="text">ประวัติจองคิว</h3>
-    </ion-button>
-
-    <ion-button expand="block" color="dark-500" shape="round" class="ion-button" size="large" (click)="gotohiprofile()">
-      <h3 class="text">บัญชีผู้ใช้</h3>
-    </ion-button>
+  <ion-button expand="block" color="brown-500"  class="ion-button" size="large" (click)="gotohistoey()">
+    <h3 class="text">ประวัติจองคิว</h3>
+  </ion-button>
+ <ion-button expand="block" color="gray-1000"  class="ion-button" size="large" (click)="gotohiprofile()">
+    <h3 class="text">บัญชีผู้ใช้</h3>
+  </ion-button>
     </ion-card>
-  </div>
 </ion-content>

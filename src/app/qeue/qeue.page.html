@@ -7,25 +7,15 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-content>
-    <ion-card-header style="text-align: center;">
-       <h1 style="font-size: 30px;">จองคิวอาหาร</h1>
-   </ion-card-header>
-    <ion-grid>
-      <ion-col>
-      <ion-card-header  style="text-align: center;" >
-        <ion-card class="ion-card">
-        <ion-item color="dark" class="ion-item">
-          <ion-label position="floating" >กรุณาใส่รายละเอียดอาหาร</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
+<ion-content [fullscreen]="true" color="brown2-1000">
+      <ion-card class="ion-card">
+        <ion-title class="title">จองคิวอาหาร</ion-title>
+          <ion-item color="dark" class="ion-item">
+            <ion-label position="floating" >กรุณาใส่รายละเอียดอาหาร</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
         <ion-button  size="large" color="brown-500" class="button1" expand="block">รับคิว</ion-button>
         <ion-card color="green-500" class="center1">
           <h1 >เลขคิว</h1></ion-card>
-        </ion-card>
-      </ion-card-header>
-    </ion-col>
-    </ion-grid>
-  </ion-content>
+    </ion-card>
 </ion-content>

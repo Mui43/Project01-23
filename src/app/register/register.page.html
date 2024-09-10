@@ -7,18 +7,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-text-center" [fullscreen]="true">
-  <ion-content>
-    <ion-grid>
-      <ion-col>
-        <ion-card-header style="text-align: center;">
-          <h1 style="font-size: 30px;">สมัครสมาชิก</h1>
-        </ion-card-header>
-      </ion-col>
-    </ion-grid>
+<ion-content class="ion-text-center" [fullscreen]="true" color="brown2-1000">
 
-    <ion-card class="ion-card">
 
+  <ion-card class="ion-card">
+    <ion-title class="haed">สมัครสมาชิก</ion-title>
       <ion-item color="dark" class="ion-item">
         <ion-label position="floating">ชื่อผู้ใช้</ion-label>
         <ion-input type="text"></ion-input>
@@ -44,8 +37,8 @@
         <ion-input type="text"></ion-input>
       </ion-item>
 
-      <ion-button size="large" shape="round" color="secondary" (click)="gotohome()"  color="dark" class="ion-buttonlogin" color="brown-500">สมัครสมาชิก</ion-button>
+      <ion-button size="large" (click)="gotohome()" class="ion-buttonlogin" color="brown-1000">สมัครสมาชิก</ion-button>
 
-    </ion-card>
-  </ion-content>
+  </ion-card>
 </ion-content>
+
