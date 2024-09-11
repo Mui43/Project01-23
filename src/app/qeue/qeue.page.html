@@ -11,11 +11,11 @@
       <ion-card class="ion-card">
         <ion-title class="title">จองคิวอาหาร</ion-title>
           <ion-item color="dark" class="ion-item">
-            <ion-label position="floating" >กรุณาใส่รายละเอียดอาหาร</ion-label>
+            <ion-label position="floating" >กรุณาใส่เมนูที่ต้องการ</ion-label>
             <ion-input type="text"></ion-input>
           </ion-item>
-        <ion-button  size="large" color="brown-500" class="button1" expand="block">รับคิว</ion-button>
-        <ion-card color="green-500" class="center1">
-          <h1 >เลขคิว</h1></ion-card>
+          <ion-button expand="block" color="success" (click)="showQueueNumber()" class="ion-item" color="brown-1000">
+            รับคิว
+          </ion-button>
     </ion-card>
 </ion-content>

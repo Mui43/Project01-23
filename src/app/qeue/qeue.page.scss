@@ -2,18 +2,18 @@
     margin-top: 60px;
     margin-left: 20px;
     margin-right: 20px;
-    border-top-left-radius:20px;
-    border-top-right-radius:20px;
-    border-bottom-left-radius:20px;
-    border-bottom-right-radius:20px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
 
 }
 .ion-card{
-    background-color:#1e402a;
-    border-top-left-radius:20px;
-    border-top-right-radius:20px;
-    border-bottom-left-radius:20px;
-    border-bottom-right-radius:20px;
+    background-color:#395144;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
     height:500px;
   }
   .button1{
@@ -34,17 +34,4 @@
   font-size: 40px;
   color: whitesmoke;
   text-align: center;
-}
-
-.ion-modal {
-  --height: 50%;
-  --border-radius: 16px;
-  --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --margin-left: 20px;
-  --margin-right: 20px;
-}
-
-ion-modal::part(backdrop) {
-  background: rgba(209, 213, 219);
-  opacity: 1;
 }
