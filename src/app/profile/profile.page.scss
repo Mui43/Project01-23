@@ -7,9 +7,7 @@
   border-bottom-left-radius:20px;
   border-bottom-right-radius:20px;
  }
- .img1{
-  margin-left: 120px;
- }
+
 
  .title{
   margin-top: 20px;
@@ -17,5 +15,18 @@
   font-size: 40px;
   color: whitesmoke;
   text-align: center;
-  
+
+}
+
+ion-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img1 {
+  border-radius: 50%;
+  width: 30%;
+  height: auto;
 }
