@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { HttpClient } from '@angular/common/http';
+import { DatabasekruapalaiService } from '../databasekruapalai.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-histoey',
@@ -7,43 +10,67 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./histoey.page.scss'],
 })
 export class HistoeyPage implements OnInit {
+  mamu:any=[];//ประกาศตัวแปร อาเรย์ เพื่อรับค่า
 
-  bookings = [
-    { code: 'A001', status: 'เสร็จสิ้น', date: '08/12/2567', time: '9.59', details: 'รายละเอียดอาหาร' },
-    { code: 'A002', status: 'รอการยืนยัน', date: '09/12/2567', time: '10.30', details: 'รายละเอียดอาหาร' },
-    { code: 'A003', status: 'เสร็จสิ้น', date: '10/12/2567', time: '9.57', details: 'รายละเอียดอาหาร' },
-    { code: 'A004', status: 'รอการยืนยัน', date: '11/12/2567', time: '9.50', details: 'รายละเอียดอาหาร' },
-    { code: 'A005', status: 'เสร็จสิ้น', date: '12/12/2567', time: '9.55', details: 'รายละเอียดอาหาร' },
-    { code: 'A006', status: 'รอการยืนยัน', date: '13/12/2567', time: '9.56', details: 'รายละเอียดอาหาร' },
-    // เพิ่มรายการอื่น ๆ ที่ต้องการ
-  ];
+  constructor(
+    private http:HttpClient,
+    public dataapi:DatabasekruapalaiService,
+    private nav:NavController,
+    private alertController: AlertController) {
+    this.loadDataMem();
+  }
 
-  constructor(private alertController: AlertController) { }
+  ngOnInit() {
+    this.loadDataMem();
+  }
 
-  async onCancelBooking(index: number) {
+  loadDataMem(){
+    this.dataapi.showmenu().subscribe({
+      next: (res:any) => {
+       console.log('Successfully',res);
+       this.mamu = res;
+      },
+      error: (error) => {
+        console.log('Error',error);
+      }
+    });
+  }
+
+  async confirmDelete(id: any) {
     const alert = await this.alertController.create({
-      header: 'ยืนยันการยกเลิก',
-      message: 'คุณต้องการยกเลิกการจองนี้หรือไม่?',
+      header: 'ยืนยันการลบ',
+      message: 'คุณต้องการลบรายการนี้หรือไม่?',
       buttons: [
         {
           text: 'ยกเลิก',
-          role: 'cancel',
-          cssClass: 'secondary',
+          role: 'cancel', // หากกด ยกเลิก จะไม่ทำอะไร
+          handler: () => {
+            console.log('การลบถูกยกเลิก');
+          },
         },
         {
-          text: 'ยืนยัน',
+          text: 'ตกลง',
           handler: () => {
-            this.bookings.splice(index, 1); // ลบรายการที่ถูกเลือก
-            console.log('รายการที่เหลือ:', this.bookings);
-          }
-        }
-      ]
+            // เรียกฟังก์ชันลบเมื่อกดตกลง
+            this.delMem(id);
+          },
+        },
+      ],
     });
 
     await alert.present();
   }
 
-  ngOnInit() {
+  async delMem(id: any) {
+    this.dataapi.delMember(id).subscribe({
+      next: (res: any) => {
+        console.log('Successfully', res);
+        this.loadDataMem(); // โหลดข้อมูลใหม่หลังจากลบ
+      },
+      error: (error) => {
+        console.log('Error', error);
+      },
+    });
   }
 
 }

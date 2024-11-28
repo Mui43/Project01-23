@@ -9,8 +9,8 @@ export class HomePage {
 
   constructor(private Nav:NavController) {
   }
-  gotomain(){
-    this.Nav.navigateForward('/main');
+  gotoedit(){
+    this.Nav.navigateForward('/edit');
 }
   gotoregister(){
   this.Nav.navigateForward('/register');

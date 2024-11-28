@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { DatabasekruapalaiService } from '../databasekruapalai.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
@@ -7,13 +9,23 @@ import { NavController } from '@ionic/angular';
 })
 export class RegisterPage implements OnInit {
 
-  constructor(private Nav:NavController) {
+  datamembers:any = {};
+
+  txtusername:any;
+  txtname:any;
+  txtphone:any;
+  txtpassword:any;
+  txtcompassword:any;
+
+
+  constructor(private Nav:NavController, public dataapi : DatabasekruapalaiService , private route:Router) {
 
    }
-   gotohome(){
+   gotohome1(){
     this.Nav.navigateForward('/home')
    }
 
+   
   ngOnInit() {
   }
 

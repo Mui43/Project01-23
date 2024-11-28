@@ -16,8 +16,8 @@ export class MainPage implements OnInit {
   gotohistoey(){
   this.Nav.navigateForward('/histoey');
 }
-  gotohiprofile(){
-  this.Nav.navigateForward('/profile');
+  gotohome(){
+  this.Nav.navigateForward('/home');
 }
 
   ngOnInit() {

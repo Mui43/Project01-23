@@ -12,17 +12,18 @@
 <ion-card class="ion-card">
   <ion-title class="haed">เข้าสู่ระบบ</ion-title>
     <ion-item  class="ion-item">
-      <ion-label position="floating">ชื่อผู้ใช้/เบอร์โทร</ion-label>
+      <ion-label position="floating">ชื่อพนักงาน</ion-label>
       <ion-input type="text"></ion-input>
     </ion-item>
 
     <ion-item  class="ion-item2">
-      <ion-input type="password" label="รหัสผ่าน" value="Hello">
+      <ion-label position="floating">รหัสผ่าน</ion-label>
+      <ion-input type="password" value="">
         <ion-input-password-toggle slot="end"></ion-input-password-toggle>
       </ion-input>
     </ion-item>
 
-    <ion-button size="large" (click)="gotomain()" class="ion-buttonlogin" color="brown-500">เข้าสู่ระบบ</ion-button><br>
+    <ion-button size="large" (click)="gotoedit()" class="ion-buttonlogin" color="brown-500">เข้าสู่ระบบ</ion-button><br>
     <ion-button shape="round" fill="clear"  (click)="gotoregister()"  color="dark">สมัครสมาชิก</ion-button>
   </ion-card>
 </ion-content>
